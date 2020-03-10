@@ -1,26 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_messages.c                                   :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taegon-i <taegon-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/22 13:25:04 by taegon-i          #+#    #+#             */
-/*   Updated: 2020/03/10 12:54:13 by taegon-i         ###   ########.fr       */
+/*   Created: 2020/03/10 14:13:29 by taegon-i          #+#    #+#             */
+/*   Updated: 2020/03/10 14:35:05 by taegon-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	error_message(int n)
+size_t len_string(char *str)
 {
-	if (n == 1)
-		printf("ERROR: need arguments!\n");
-	if (n == 2)
-		printf("ERROR: arguments is not numbers\n");
-	if (n == 3)
-		printf("ERROR: malloc error\n");
-	if (n == 4)
-		printf("ERROR: arguments is not INT's\n");
-	exit(0);
+	size_t count;
+	size_t i;
+
+	i = 1;
+	count = 0;
+	while (str[i])
+	{
+		if (str[i] == ' ')
+		{
+			count++;
+			i++;
+		}
+		else
+			i++;
+	}
+	if (str[i - 1] != ' ')
+		count++;
+	return (count);
+
+}
+
+size_t len_array(char **str)
+{
+	size_t count;
+	size_t i;
+
+	i = 0;
+	count = 0;
+	while (str[i])
+	{
+		if (str[i] == ' ')
+		{
+			count++;
+			i++;
+		}
+		else
+			i++;
+	}
+	if (str[i - 1] != ' ')
+		count++;
+	return (count);
 }
