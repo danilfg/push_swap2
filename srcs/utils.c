@@ -6,7 +6,7 @@
 /*   By: taegon-i <taegon-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 14:13:29 by taegon-i          #+#    #+#             */
-/*   Updated: 2020/03/11 11:42:01 by jcremin          ###   ########.fr       */
+/*   Updated: 2020/03/11 12:13:56 by taegon-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,4 @@ size_t len_string(char *str)
 		count++;
 	return (count);
 
-}
-
-size_t len_array(char **str)
-{
-	size_t count;
-	size_t i;
-
-	i = 0;
-	count = 0;
-	while (str[i])
-	{
-		count++;
-		i++;
-	}
-	return (count);
 }

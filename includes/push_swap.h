@@ -6,7 +6,7 @@
 /*   By: taegon-i <taegon-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 15:23:46 by taegon-i          #+#    #+#             */
-/*   Updated: 2020/03/10 14:33:01 by taegon-i         ###   ########.fr       */
+/*   Updated: 2020/03/11 11:45:59 by taegon-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void		add_in_stack(t_stack *stack, int elem, int i);
 **	utils.c
 */
 
-size_t len_array(char **str);
 size_t len_string(char *str);
 
 

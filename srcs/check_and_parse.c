@@ -6,7 +6,7 @@
 /*   By: taegon-i <taegon-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 12:52:28 by taegon-i          #+#    #+#             */
-/*   Updated: 2020/03/10 15:27:00 by jcremin          ###   ########.fr       */
+/*   Updated: 2020/03/11 12:26:13 by taegon-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,17 @@ void		add_in_stack(t_stack *stack, int elem, int i)
 
 	stack->a = a;
 	stack->a[i] = elem;
+	ft_putnbr(stack->a[i]);
+	write(1, "\n", 1);
 }
 
 void	parse_array(t_stack *stack, int argc, char **argv)
 {
 	int i;
 
-	i = 1;
-	while (i < argc)
-	{
-		if (!ft_isint(argv[i]))
-			error_message(4);
-		add_in_stack(stack, ft_atoi(argv[i]), i);
-		i++;
-
-	}
+	i = 0;
+	while (++i < argc)
+		add_in_stack(stack, ft_atoi(argv[i]), (i - 1));
 }
 
 void	parse_string(t_stack *stack, char *str)
@@ -41,19 +37,17 @@ void	parse_string(t_stack *stack, char *str)
 	size_t	i;
 	size_t	j;
 	write(1, "1", 1);
+	write(1, "\n", 1);
 
 	numbers = ft_strsplit(str, ' ');
 	i = 0;
 	j = 1;
 	while (numbers[i])
 	{
-		write(1, "2", 1);
-		if (!ft_isnum(numbers[i], 10))
-			error_message(2);
-		if (!ft_isint(numbers[i]))
-			error_message(4);
-		ft_putnbr(ft_atoi(numbers[1]));
-		add_in_stack(stack, ft_atoi(numbers[j]), i);
+		// write(1, "2", 1);
+		ft_putnbr(ft_atoi(numbers[i]));
+		write(1, "\n", 1);
+		add_in_stack(stack, ft_atoi(numbers[i]), i);
 		i++;
 		j++;
 
@@ -78,14 +72,15 @@ t_stack		*contain_in_a(int argc, char **argv)
 	if (argc == 2)
 	{
 		count = len_string(argv[1]);
+		ft_putnbr(count);
+		write(1, "\n", 1);
+
 		stack->a_size = count;
 		parse_string(stack, argv[1]);
 	}
 	else
 	{
-		count = len_array(&argv[1]);
-		ft_putnbr(count);
-		stack->a_size = count;
+		stack->a_size = argc - 1;
 		parse_array(stack, argc, argv);
 	}
 	return (stack);
