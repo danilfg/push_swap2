@@ -6,7 +6,7 @@
 /*   By: taegon-i <taegon-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 14:13:29 by taegon-i          #+#    #+#             */
-/*   Updated: 2020/03/10 14:35:05 by taegon-i         ###   ########.fr       */
+/*   Updated: 2020/03/11 11:42:01 by jcremin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,8 @@ size_t len_array(char **str)
 	count = 0;
 	while (str[i])
 	{
-		if (str[i] == ' ')
-		{
-			count++;
-			i++;
-		}
-		else
-			i++;
-	}
-	if (str[i - 1] != ' ')
 		count++;
+		i++;
+	}
 	return (count);
 }

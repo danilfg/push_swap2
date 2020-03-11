@@ -6,13 +6,13 @@
 /*   By: taegon-i <taegon-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 15:24:29 by taegon-i          #+#    #+#             */
-/*   Updated: 2020/03/10 13:56:48 by taegon-i         ###   ########.fr       */
+/*   Updated: 2020/03/10 15:07:09 by jcremin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		main(int argc, char *argv[])
+int		main(int argc, char **argv)
 {
 	t_stack	*stack;
 	int i;

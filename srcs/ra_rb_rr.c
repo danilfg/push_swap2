@@ -6,23 +6,6 @@
 /*   By: jcremin <jcremin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 12:24:23 by jcremin           #+#    #+#             */
-/*   Updated: 2020/03/10 12:41:36 by taegon-i         ###   ########.fr       */
+/*   Updated: 2020/03/10 15:29:15 by jcremin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "push_swap.h"
-
-void	ra(t_stack_all *stack)
-{
-
-}
-
-void	rb(t_stack_all *stack)
-{
-
-}
-
-void	rr(t_stack_all *stack)
-{
-
-}
